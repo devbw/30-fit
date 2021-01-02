@@ -24,6 +24,11 @@ let nombreAleatoireTrois   = 0;
 let nombreAleatoireQuatre  = 0;
 let nombreAleatoireCinq    = 0;
 let nombreAleatoireSix     = 0;
+let startingMinutes        = 30;
+let time                   = startingMinutes * 60;
+let chrono                 = document.querySelector('#chrono');
+let remove                 = document.querySelector('#remove');
+let chronoBouton           = document.querySelector('#chronoBouton');
 
 /* Fonction Nombre aléatoire*/
 function genererNombreEntier(max) {
@@ -38,8 +43,22 @@ function genererNombreAleatoire() {
     nombreAleatoireCinq   = genererNombreEntier(exercicesFive.length);
     nombreAleatoireSix    = genererNombreEntier(exercicesSix.length);
 }
+/* Fonction Chrono */
+
+function updateCountdown() {
+    const minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    chrono.innerHTML = `${minutes} : ${seconds}`;
+    chrono.style.fontSize = '3.5em';
+    chrono.style.marginTop = '8%';
+    time--;
+}
 
 /*Clic sur le bouton*/
+
 replaceTrainings.addEventListener('click', () => {
     mode.innerHTML = ' ';
     descript.innerHTML = ' ';
@@ -53,5 +72,12 @@ replaceTrainings.addEventListener('click', () => {
     exerciceFive.textContent  = exercicesFive[nombreAleatoireCinq];
     exerciceSix.textContent   = exercicesSix[nombreAleatoireSix];
 
-    replaceTrainings.textContent = "C'est parti !";
+    remove.removeChild(replaceTrainings);
+
+    chronoBouton.style.display = 'inline';
+})
+
+chronoBouton.addEventListener('click', () => {
+    setInterval(updateCountdown, 1000);
+    remove.removeChild(chronoBouton);
 })
