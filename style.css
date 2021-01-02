@@ -17,8 +17,9 @@ body{
 .navbar-brand{
     opacity: 0.6;
 }
-.text-light{
+.text-light, .text-danger{
     font-family: 'Raleway', sans-serif;
+    text-decoration: none;
 }
 .fit{
     font-size: 4em;
