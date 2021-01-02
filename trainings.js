@@ -71,11 +71,15 @@ replaceTrainings.addEventListener('click', () => {
     exerciceFour.textContent  = exercicesFour[nombreAleatoireQuatre];
     exerciceFive.textContent  = exercicesFive[nombreAleatoireCinq];
     exerciceSix.textContent   = exercicesSix[nombreAleatoireSix];
-
+    let repos = document.createElement('p');
+    repos.textContent = 'Repos 2 minutes';
+    repos.style.marginTop = '2%';
+    exerciceSix.appendChild(repos);
     remove.removeChild(replaceTrainings);
 
     chronoBouton.style.display = 'inline';
 
+    
 })
 
 chronoBouton.addEventListener('click', () => {
