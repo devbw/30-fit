@@ -31,11 +31,17 @@ body{
 .train{
     font-size: 3em;
 }
+#encouragements{
+    display: none;
+    margin-bottom: 5%;
+    font-size: 1.2em;
+}
 .btn{
     margin-top: 8%;
 }
 .exercices{
     margin-bottom: 2%;
+    font-size: 1.1em;
 }
 #exercice-six{
     margin-bottom: 15%;

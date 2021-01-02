@@ -6,6 +6,14 @@ let exercicesFour  = ['Pike push-up : 10', 'Handstand : 30s', 'Handstand push-up
 let exercicesFive  = ['Squat : 20', 'Squat sautés : 20 ', 'Pistol squat : 10 par jambe', 'Fentes : 20 par jambe', 'Fentes sautées : 20']
 let exercicesSix   = ['Crunch : 30 ', 'Relevé de jambes couché : 30', 'Planche : 1mn', 'Relevé de Jambes à la barre : 20']
 
+/* Tableaux encouragements */
+let quotes = [
+    ['Donnez-vous à fond !'],
+    ["N'abandonnez pas !"],
+    ["Courage !"],
+    ["Même si c'est dur continuez !"],
+    ['Ne lachez rien !']
+]
 
 /*Variables globales */
 let exerciceOne      = document.querySelector('#exercice-one');
@@ -29,8 +37,27 @@ let time                   = startingMinutes * 60;
 let chrono                 = document.querySelector('#chrono');
 let remove                 = document.querySelector('#remove');
 let chronoBouton           = document.querySelector('#chronoBouton');
+let encouragements         = document.querySelector('#encouragements');
+let last = 0;
+let nombreAleatoireQuotes  = 0;
 
-/* Fonction Nombre aléatoire*/
+/* Fonction Nombre aléatoire citation */
+function genererNombreCitations(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+};
+/* Fonction citations aléatoires */
+function genererCitations() {
+    do {
+        nombreAleatoireQuotes = genererNombreCitations(quotes.length)
+    } while (nombreAleatoireQuotes == last);
+
+    encouragements.textContent = quotes[nombreAleatoireQuotes];
+    last = nombreAleatoireQuotes;
+}
+ /* Appel de la fonction */
+setInterval(genererCitations, 6000);
+
+/* Fonction Nombre aléatoire */
 function genererNombreEntier(max) {
     return Math.floor(Math.random() * Math.floor(max));
 };
@@ -72,7 +99,7 @@ replaceTrainings.addEventListener('click', () => {
     exerciceFive.textContent  = exercicesFive[nombreAleatoireCinq];
     exerciceSix.textContent   = exercicesSix[nombreAleatoireSix];
     let repos = document.createElement('p');
-    repos.textContent = 'Repos 2 minutes';
+    repos.innerHTML = 'Repos 3 minutes </br> On recommence !';
     repos.style.marginTop = '2%';
     exerciceSix.appendChild(repos);
     remove.removeChild(replaceTrainings);
@@ -81,8 +108,9 @@ replaceTrainings.addEventListener('click', () => {
 
     
 })
-
+/* Clic bouton chrono */
 chronoBouton.addEventListener('click', () => {
     setInterval(updateCountdown, 1000);
     remove.removeChild(chronoBouton);
+    encouragements.style.display = 'inline';
 })
