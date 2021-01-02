@@ -32,7 +32,7 @@ let nombreAleatoireTrois   = 0;
 let nombreAleatoireQuatre  = 0;
 let nombreAleatoireCinq    = 0;
 let nombreAleatoireSix     = 0;
-let startingMinutes        = 30;
+let startingMinutes        = 1;
 let time                   = startingMinutes * 60;
 let chrono                 = document.querySelector('#chrono');
 let remove                 = document.querySelector('#remove');
@@ -116,4 +116,10 @@ chronoBouton.addEventListener('click', () => {
     setInterval(updateCountdown, 1000);
     remove.removeChild(chronoBouton);
     encouragements.style.display = 'inline';
+})
+
+/* Clic bouton "terminer" */
+
+endTrainingButton.addEventListener('click', () => {
+    window.location.href = "randomtrainings.html";
 })
