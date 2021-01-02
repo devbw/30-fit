@@ -32,7 +32,7 @@ let nombreAleatoireTrois   = 0;
 let nombreAleatoireQuatre  = 0;
 let nombreAleatoireCinq    = 0;
 let nombreAleatoireSix     = 0;
-let startingMinutes        = 1;
+let startingMinutes        = 30;
 let time                   = startingMinutes * 60;
 let chrono                 = document.querySelector('#chrono');
 let remove                 = document.querySelector('#remove');
@@ -85,7 +85,8 @@ function updateCountdown() {
     if (time > 0) {
         time--;
     } else {
-        chrono.innerHTML = `Terminé !`;
+        chrono.innerHTML = ' ';
+        endTrainingButton.style.display = 'inline';
     }
 }
 
