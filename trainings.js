@@ -52,4 +52,6 @@ replaceTrainings.addEventListener('click', () => {
     exerciceFour.textContent  = exercicesFour[nombreAleatoireQuatre];
     exerciceFive.textContent  = exercicesFive[nombreAleatoireCinq];
     exerciceSix.textContent   = exercicesSix[nombreAleatoireSix];
+
+    replaceTrainings.textContent = "C'est parti !";
 })
