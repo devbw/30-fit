@@ -34,8 +34,8 @@ body{
     margin-top: 8%;
 }
 .slide-in-bottom {
-	-webkit-animation: slide-in-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
-	        animation: slide-in-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
+	-webkit-animation: slide-in-bottom 3.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
+	        animation: slide-in-bottom 3.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
 }
 @-webkit-keyframes slide-in-bottom {
     0% {
