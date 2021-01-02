@@ -1,10 +1,10 @@
 /* Tableau exos*/
-let exercicesOne   = ['Jumping Jacks', 'Burpees', 'Montée de genoux', 'Mountain Climber']
-let exercicesTwo   = ['Pompes', 'Pompes prise large', 'Pompes pieds surélevés', 'Dips']
-let exercicesThree = ['Tractions supination', 'Tractions pronation', 'Tractions prise large', 'Tractions prise serrée']
-let exercicesFour  = ['Pike push-up', 'Handstand', 'Handstand push-up']
-let exercicesFive  = ['Squat', 'Squat sautés', 'Pistol squat', 'Fentes', 'Fentes sautées']
-let exercicesSix   = ['Crunch', 'Relevé de jambes couché', 'Planche', 'Relevé de Jambes à la barre']
+let exercicesOne   = ['Jumping Jacks : 25', 'Burpees : 25', 'Montée de genoux : 40', 'Mountain Climber : 40']
+let exercicesTwo   = ['Pompes : 10 ', 'Pompes prise large : 10', 'Pompes pieds surélevés : 10', 'Dips : 10']
+let exercicesThree = ['Tractions supination : 10 ', 'Tractions pronation : 10', 'Tractions prise large : 10', 'Tractions prise serrée : 10']
+let exercicesFour  = ['Pike push-up : 10', 'Handstand : 30s', 'Handstand push-up : 30s']
+let exercicesFive  = ['Squat : 20', 'Squat sautés : 20 ', 'Pistol squat : 10 par jambe', 'Fentes : 20 par jambe', 'Fentes sautées : 20']
+let exercicesSix   = ['Crunch : 30 ', 'Relevé de jambes couché : 30', 'Planche : 1mn', 'Relevé de Jambes à la barre : 20']
 
 
 /*Variables globales */
@@ -75,6 +75,7 @@ replaceTrainings.addEventListener('click', () => {
     remove.removeChild(replaceTrainings);
 
     chronoBouton.style.display = 'inline';
+
 })
 
 chronoBouton.addEventListener('click', () => {
