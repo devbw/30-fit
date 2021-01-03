@@ -6,7 +6,6 @@
 body{
     display: flex;
     justify-content: center;
-    height: 100vh;
     align-items: center;
     flex-direction: column;
     text-decoration: none;
@@ -52,6 +51,12 @@ body{
     margin-top: 10%;
     margin-bottom: 10%;
 }
+.removeall{
+  margin-top: 150px;
+}
+.removeall-two{
+  margin-top: 80px;
+}
 .mode{
     text-decoration: none;
     color: black;
@@ -78,7 +83,7 @@ body{
     font-size: 1.2em;
 }
 #exercice-six{
-    margin-bottom: 10%;
+    margin-bottom: 7%;
 }
 #chronoBouton{
     display: none;
@@ -216,7 +221,13 @@ body{
 
 @media (max-width: 840px){
 	body{
-        padding-top: 45%;
-        height: 100%;
-    }
+    padding-top: 45%;
+    height: 100%;
+  }
+  .removeall{
+    margin-top: 0px;
+  }
+  .removeall-two{
+    margin-top: 0px;
+  }
 }

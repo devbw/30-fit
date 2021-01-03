@@ -1,10 +1,3 @@
-/* Tableaux exos */
-let boss = [
-    ['Burpees : 15', 'Dips : 10', 'Tractions prise serrée : 10', 'Handstand Push-up : 10', 'Planche : 1mn'],
-    ['Jumping Jacks : 30', 'Pompes : 15', 'Tractions prise large : 10', 'Pistol Squat : 10 par jambe', 'Relevé de jambes barre : 15'],
-    ['Burpees : 25', 'Pompes : 25', 'Squat sautés : 25', 'Crunchs : 10', 'Planche : 1mn']
-]
-
 /* Variables globales */
 let trainingsDone          = document.querySelector('#numberTrainingsDone');
 let train1  = document.querySelector('#train1');
@@ -62,4 +55,16 @@ train7.addEventListener('click', () => {
 
 train8.addEventListener('click', () => {
     document.location.href="../HTML/trainingeight.html";
+})
+
+train9.addEventListener('click', () => {
+    document.location.href="../HTML/trainingnine.html";
+})
+
+train10.addEventListener('click', () => {
+    document.location.href="../HTML/trainingten.html";
+})
+
+train11.addEventListener('click', () => {
+    document.location.href="../HTML/trainingteleven.html";
 })
