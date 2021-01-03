@@ -4,12 +4,12 @@
     box-sizing: border-box;
 }
 body{
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-decoration: none;
+    padding-top: 45%;
 }
 .bkn{
     background-color: #1e1f20;
@@ -44,14 +44,55 @@ body{
     font-size: 1.1em;
 }
 #exercice-six{
-    margin-bottom: 15%;
+    margin-bottom: 10%;
 }
 #chronoBouton{
     display: none;
 }
 #endTraining{
     display: none;
+    position: relative;
 }
+#cheers{
+    color: #FFD700;
+    display: none;
+}
+.scale-in-bottom {
+	-webkit-animation: scale-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@-webkit-keyframes scale-in-bottom {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-bottom {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+      opacity: 1;
+    }
+  }
 .slide-in-bottom {
 	-webkit-animation: slide-in-bottom 3.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
 	        animation: slide-in-bottom 3.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;

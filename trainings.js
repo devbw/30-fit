@@ -41,11 +41,13 @@ let encouragements         = document.querySelector('#encouragements');
 let last = 0;
 let nombreAleatoireQuotes  = 0;
 let endTrainingButton      = document.querySelector('#endTraining');
+let cheers                 = document.querySelector('#cheers');
 
 /* Fonction Nombre aléatoire citation */
 function genererNombreCitations(max) {
     return Math.floor(Math.random() * Math.floor(max));
 };
+
 /* Fonction citations aléatoires */
 function genererCitations() {
     do {
@@ -55,6 +57,7 @@ function genererCitations() {
     encouragements.textContent = quotes[nombreAleatoireQuotes];
     last = nombreAleatoireQuotes;
 }
+
  /* Appel de la fonction */
 setInterval(genererCitations, 6000);
 
@@ -62,6 +65,7 @@ setInterval(genererCitations, 6000);
 function genererNombreEntier(max) {
     return Math.floor(Math.random() * Math.floor(max));
 };
+
 /*Fonction pour générer un nombre par tableau*/
 function genererNombreAleatoire() {
     nombreAleatoireUn     = genererNombreEntier(exercicesOne.length);
@@ -89,6 +93,10 @@ function updateCountdown() {
         endTrainingButton.style.display = 'inline';
     }
 }
+/* Fonction retour à la page entraînement */
+function returnTraining() {
+    window.location.href = "randomtrainings.html";
+}
 
 /*Clic sur le bouton*/
 replaceTrainings.addEventListener('click', () => {
@@ -111,6 +119,7 @@ replaceTrainings.addEventListener('click', () => {
 
     chronoBouton.style.display = 'inline';
 })
+
 /* Clic bouton chrono */
 chronoBouton.addEventListener('click', () => {
     setInterval(updateCountdown, 1000);
@@ -119,7 +128,21 @@ chronoBouton.addEventListener('click', () => {
 })
 
 /* Clic bouton "terminer" */
-
 endTrainingButton.addEventListener('click', () => {
-    window.location.href = "randomtrainings.html";
+    if(typeof localStorage!='undefined'){
+        let trainingsDone = localStorage.getItem('trainingsDone');
+        if(trainingsDone!=null) {
+            trainingsDone = parseInt(trainingsDone);
+        } else {
+            trainingsDone = 0;
+        }
+        trainingsDone++;
+        localStorage.setItem('trainingsDone', trainingsDone);
+    } else {
+        alert("Le localStorage n'est pas supporté");
+    }
+    remove.removeChild(endTrainingButton);
+    encouragements.innerHTML = ' ';
+    cheers.style.display = 'inline';
+    setInterval(returnTraining, 4000);
 })
