@@ -19,6 +19,7 @@
             </div>
         </nav>
     </header>
+    <div class="container removeall">
     <div class="container text-center text-focus-in">
         <p id="numberTrainingsDone" class="text-center nbTrain"></p>   
     </div>
@@ -33,25 +34,25 @@
     </div>
     <div class="container noob text-center text-focus-in" id="debutant">
         <h2 class="text-light">Débutants</h2>
-        <div class="card bg-dark">
+        <div class="card bg-dark" id="train1">
             <img src="pictures/sport.jpg" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title text-light">Entraînement 1</h5>  
             </div>
         </div>
-        <div class="card bg-dark">
+        <div class="card bg-dark" id="train2">
             <img src="pictures/sport.jpg" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title text-light">Entraînement 2</h5>  
             </div>
         </div>
-        <div class="card bg-dark">
+        <div class="card bg-dark" id="train3">
             <img src="pictures/sport.jpg" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title text-light">Entraînement 3</h5>  
             </div>
         </div>
-        <div class="card bg-dark">
+        <div class="card bg-dark" id="train4">
             <img src="pictures/sport.jpg" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title text-light">Entraînement 4</h5>  
@@ -60,25 +61,25 @@
     </div>
     <div class="container inter text-center text-focus-in" id="mid">
         <h2 class="text-light">Intermédiaire</h2>
-        <div class="card bg-dark">
+        <div class="card bg-dark" id="train5">
             <img src="pictures/sport1.jpg" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title text-light">Entraînement 1</h5>  
             </div>
         </div>
-        <div class="card bg-dark">
+        <div class="card bg-dark" id="train6">
             <img src="pictures/sport1.jpg" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title text-light">Entraînement 2</h5>  
             </div>
         </div>
-        <div class="card bg-dark">
+        <div class="card bg-dark" id="train7">
             <img src="pictures/sport1.jpg" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title text-light">Entraînement 3</h5>  
             </div>
         </div>
-        <div class="card bg-dark">
+        <div class="card bg-dark" id="train8">
             <img src="pictures/sport1.jpg" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title text-light">Entraînement 4</h5>  
@@ -87,24 +88,30 @@
     </div>
     <div class="container boss text-center text-focus-in" id="boss">
         <h2 class="text-light">Avancé</h2>
-        <div class="card bg-dark">
+        <div class="card bg-dark" id="train9">
             <img src="pictures/sport2.jpg" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title text-light">Entraînement 1</h5>  
             </div>
         </div>
-        <div class="card bg-dark">
+        <div class="card bg-dark" id="train10">
             <img src="pictures/sport2.jpg" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title text-light">Entraînement 2</h5>  
             </div>
         </div>
-        <div class="card bg-dark">
+        <div class="card bg-dark" id="train11">
             <img src="pictures/sport2.jpg" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title text-light">Entraînement 3</h5>  
             </div>
         </div>
+        
+            <button type="button" id="chronoBouton" class="btn btn-danger text-center">C'est parti !</button>
+            <div id="chronoTrain" class="text-center text-light"></div>
+            <button type="button" id="endTraining" class="btn btn-success text-center text-focus-in">Terminer</button>
+        
+    </div>
     </div>
 </body>
 <script type="text/javascript" src="trainingCards.js"></script>
