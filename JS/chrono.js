@@ -32,7 +32,7 @@ function updateCountdown() {
 
 /* Fonction retour à la page entraînement */
 function returnTraining() {
-    window.location.href = "trainings.html";
+    window.location.href = "../HTML/trainings.html";
 }
 
 /* Clic bouton "terminer" */

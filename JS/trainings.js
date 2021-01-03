@@ -14,8 +14,7 @@ let quotes = [
     ["Même si c'est dur continuez !"],
     ['Ne lachez rien !'],
     ['Privilégiez une bonne exécution'],
-    ['Même si vous êtes épuisé, finissez !'],
-
+    ['Même si vous êtes épuisé, finissez !']
 ]
 
 /*Variables globales */
@@ -99,7 +98,7 @@ function updateCountdown() {
 }
 /* Fonction retour à la page entraînement */
 function returnTraining() {
-    window.location.href = "randomtrainings.html";
+    window.location.href = "../HTML/randomtrainings.html";
 }
 
 /*Clic sur le bouton*/
