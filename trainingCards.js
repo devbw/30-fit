@@ -69,3 +69,11 @@ train5.addEventListener('click', () => {
 train6.addEventListener('click', () => {
     document.location.href="trainingsix.html";
 })
+
+train7.addEventListener('click', () => {
+    document.location.href="trainingseven.html";
+})
+
+train8.addEventListener('click', () => {
+    document.location.href="trainingeight.html";
+})
