@@ -1,10 +1,10 @@
 /* Tableau exos*/
-let exercicesOne   = ['Jumping Jacks : 25', 'Burpees : 25', 'Montée de genoux : 40', 'Mountain Climber : 40']
-let exercicesTwo   = ['Pompes : 10 ', 'Pompes prise large : 10', 'Pompes pieds surélevés : 10', 'Dips : 10']
-let exercicesThree = ['Tractions supination : 10 ', 'Tractions pronation : 10', 'Tractions prise large : 10', 'Tractions prise serrée : 10']
-let exercicesFour  = ['Pike push-up : 10', 'Handstand : 30s', 'Handstand push-up : 30s']
-let exercicesFive  = ['Squat : 20', 'Squat sautés : 20 ', 'Pistol squat : 10 par jambe', 'Fentes : 20 par jambe', 'Fentes sautées : 20']
-let exercicesSix   = ['Crunch : 30 ', 'Relevé de jambes couché : 30', 'Planche : 1mn', 'Relevé de Jambes à la barre : 20']
+let exercicesOne   = ['Jumping Jacks : 25 reps', 'Burpees : 25 reps', 'Montée de genoux : 40 reps', 'Mountain Climber : 40 reps']
+let exercicesTwo   = ['Pompes : 10 reps', 'Pompes prise large : 10 reps', 'Pompes pieds surélevés : 10 reps', 'Dips : 10 reps']
+let exercicesThree = ['Tractions supination : 10 reps', 'Tractions pronation : 10 reps', 'Tractions prise large : 10 reps', 'Tractions prise serrée : 10 reps']
+let exercicesFour  = ['Pike push-up : 10 reps', 'Handstand : 30s', 'Handstand push-up : 30s']
+let exercicesFive  = ['Squat : 20 reps', 'Squat sautés : 20 reps', 'Pistol squat : 10 reps par jambe', 'Fentes : 20 reps par jambe', 'Fentes sautées : 20 reps']
+let exercicesSix   = ['Crunch : 30 reps', 'Relevé de jambes couché : 30 reps', 'Planche : 1mn', 'Relevé de jambes à la barre : 20 reps']
 
 /* Tableaux encouragements */
 let quotes = [
@@ -12,7 +12,10 @@ let quotes = [
     ["N'abandonnez pas !"],
     ["Courage !"],
     ["Même si c'est dur continuez !"],
-    ['Ne lachez rien !']
+    ['Ne lachez rien !'],
+    ['Privilégiez une bonne exécution'],
+    ['Même si vous êtes épuisé, finissez !'],
+
 ]
 
 /*Variables globales */
@@ -32,7 +35,7 @@ let nombreAleatoireTrois   = 0;
 let nombreAleatoireQuatre  = 0;
 let nombreAleatoireCinq    = 0;
 let nombreAleatoireSix     = 0;
-let startingMinutes        = 30;
+let startingMinutes        = 0.1;
 let time                   = startingMinutes * 60;
 let chrono                 = document.querySelector('#chrono');
 let remove                 = document.querySelector('#remove');
@@ -42,6 +45,7 @@ let last = 0;
 let nombreAleatoireQuotes  = 0;
 let endTrainingButton      = document.querySelector('#endTraining');
 let cheers                 = document.querySelector('#cheers');
+let removeCheers           = document.querySelector('.removeCheers');
 
 /* Fonction Nombre aléatoire citation */
 function genererNombreCitations(max) {
@@ -130,11 +134,9 @@ chronoBouton.addEventListener('click', () => {
 /* Clic bouton "terminer" */
 endTrainingButton.addEventListener('click', () => {
     if(typeof localStorage!='undefined'){
-        let trainingsDone = localStorage.getItem('trainingsDone');
+        let trainingsDone = localStorage.getItem('trainingsDone', 0);
         if(trainingsDone!=null) {
             trainingsDone = parseInt(trainingsDone);
-        } else {
-            trainingsDone = 0;
         }
         trainingsDone++;
         localStorage.setItem('trainingsDone', trainingsDone);
@@ -142,7 +144,7 @@ endTrainingButton.addEventListener('click', () => {
         alert("Le localStorage n'est pas supporté");
     }
     remove.removeChild(endTrainingButton);
-    encouragements.innerHTML = ' ';
+    removeCheers.removeChild(encouragements);
     cheers.style.display = 'inline';
     setInterval(returnTraining, 4000);
 })
