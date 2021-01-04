@@ -25,7 +25,7 @@ let exerciceFour     = document.querySelector('#exercice-four');
 let exerciceFive     = document.querySelector('#exercice-five');
 let exerciceSix      = document.querySelector('#exercice-six');
 let mode             = document.querySelector('#mode');
-let descript         = document.querySelector('#descript');
+let descript         = document.querySelector('#descript'); 
 
 let replaceTrainings       = document.querySelector('#replace-trainings');
 let nombreAleatoireUn      = 0;
