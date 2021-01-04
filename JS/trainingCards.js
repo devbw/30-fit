@@ -11,6 +11,7 @@ let train8  = document.querySelector('#train8');
 let train9  = document.querySelector('#train9');
 let train10 = document.querySelector('#train10');
 let train11 = document.querySelector('#train11');
+let trainBoss = document.querySelector('#trainBoss');
 
 /* Appel Fonctions globales */
 printTrainingsDone();
@@ -67,4 +68,8 @@ train10.addEventListener('click', () => {
 
 train11.addEventListener('click', () => {
     document.location.href="../HTML/trainingteleven.html";
+})
+
+trainBoss.addEventListener('click', () => {
+    document.location.href="../HTML/randomtrainings.html";
 })

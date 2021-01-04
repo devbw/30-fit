@@ -20,8 +20,7 @@
         </nav>
     </header>
 
-    <div class="container removeall">
-    <div class="container text-center text-focus-in">
+    <div class="container text-center text-focus-in removeall">
         <p id="numberTrainingsDone" class="text-center nbTrain"></p>   
     </div>
     <div class="container text-center text-focus-in">
@@ -32,6 +31,7 @@
         <a href="#debutant" class="mode">LVL1</a>
         <a href="#mid" class="mode">LVL2</a>
         <a href="#boss" class="mode">LVL3</a>
+        <a href="#hardcore" class="mode">LVL4</a>
     </div>
     <div class="container noob text-center text-focus-in" id="debutant">
         <h2 class="text-light">Débutants</h2>
@@ -106,13 +106,16 @@
             <div class="card-body">
                 <h5 class="card-title text-light">Entraînement 3</h5>  
             </div>
-        </div>
-        
-            <button type="button" id="chronoBouton" class="btn btn-danger text-center">C'est parti !</button>
-            <div id="chronoTrain" class="text-center text-light"></div>
-            <button type="button" id="endTraining" class="btn btn-success text-center text-focus-in">Terminer</button>
-        
+        </div>   
     </div>
+    <div class="container boss text-center text-focus-in" id="hardcore">
+        <h2 class="text-light">Hardcore</h2>
+        <div class="card bg-dark" id="trainBoss">
+            <img src="../pictures/sport2.jpg" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title text-light">Boss final</h5>  
+            </div>
+        </div>  
     </div>
 </body>
 <script type="text/javascript" src="../JS/trainingCards.js"></script>
