@@ -1,7 +1,7 @@
 let chronoBouton = document.querySelector('#chronoBouton');
 let remove = document.querySelector('#remove');
 let chrono = document.querySelector('#chrono');
-let startingMinutes        = 0.1;
+let startingMinutes        = 5;
 let time                   = startingMinutes * 60;
 let endTrainingButton      = document.querySelector('#endTraining');
 
