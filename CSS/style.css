@@ -1,55 +1,75 @@
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
     
 }
 .bkn{
-    background-color: #171718;
+  background-color: #171718;
 }
 .navbar-brand{
-    opacity: 0.6;
+  opacity: 0.6;
 }
 .text-light, .text-danger{
-    font-family: 'Raleway', sans-serif;
-    text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
 }
 .fit{
-    font-size: 4em;
-    margin-bottom: 15%;
+  font-size: 5em;
+  margin-bottom: 10%;
+  font-weight: 600;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  filter: drop-shadow(0 0 10px #e20000);
+}
+.neon{
+  filter: drop-shadow(0 0 10px #e20000);
+  color: white;
+  font-size: 1.4em;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0px;
+}
+.marge-start{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .fit-descript{
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .train{
-    font-size: 3em;
+  font-size: 3em;
 }
 
 .btn{
-    margin-top: 8%;
-    box-shadow: 0 1px 3px rgba(211, 211, 211, 0.12), 0 1px 2px rgba(211,211,211,0.24);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  margin-top: 8%;
+  box-shadow: 0 1px 3px rgba(211, 211, 211, 0.12), 0 1px 2px rgba(211,211,211,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 .btn:hover {
-    box-shadow: 0 14px 28px rgba(211, 211, 211,0.25), 0 10px 10px rgba(211, 211, 211,0.22);
+  box-shadow: 0 14px 28px rgba(211, 211, 211,0.25), 0 10px 10px rgba(211, 211, 211,0.22);
   }
 .exercices{
-    margin-bottom: 2%;
-    font-size: 1.1em;
+  margin-bottom: 2%;
+  font-size: 1.1em;
 }
 .nbTrain{
-    color: #FFD700;
+  color: #FFD700;
 }
 .card{
-    margin-top: 10%;
-    margin-bottom: 10%;
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 .removeall{
   margin-top: 150px;
@@ -96,7 +116,200 @@ body{
     color: #FFD700;
     display: none;
 }
-
+.flicker {
+	-webkit-animation: flicker 4s linear both;
+	        animation: flicker 4s linear both;
+}
+@-webkit-keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  10.1% {
+    opacity: 1;
+  }
+  10.2% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  20.1% {
+    opacity: 1;
+  }
+  20.6% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  30.1% {
+    opacity: 1;
+  }
+  30.5% {
+    opacity: 1;
+  }
+  30.6% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  45.1% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  55.1% {
+    opacity: 0;
+  }
+  57% {
+    opacity: 0;
+  }
+  57.1% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  60.1% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  65.1% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  75.1% {
+    opacity: 0;
+  }
+  77% {
+    opacity: 0;
+  }
+  77.1% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  85.1% {
+    opacity: 0;
+  }
+  86% {
+    opacity: 0;
+  }
+  86.1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  10.1% {
+    opacity: 1;
+  }
+  10.2% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  20.1% {
+    opacity: 1;
+  }
+  20.6% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  30.1% {
+    opacity: 1;
+  }
+  30.5% {
+    opacity: 1;
+  }
+  30.6% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  45.1% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  55.1% {
+    opacity: 0;
+  }
+  57% {
+    opacity: 0;
+  }
+  57.1% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  60.1% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  65.1% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  75.1% {
+    opacity: 0;
+  }
+  77% {
+    opacity: 0;
+  }
+  77.1% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  85.1% {
+    opacity: 0;
+  }
+  86% {
+    opacity: 0;
+  }
+  86.1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .scale-in-bottom {
 	-webkit-animation: scale-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: scale-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
